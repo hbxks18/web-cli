@@ -10,11 +10,11 @@
 ## 🔨 安装
 
 ```bash
-`npm install web-cli -g`
+`npm install sf-web-cli -g`
 ```
 
 ## ⌨️ 使用
 
 ```bash
-`web-cli create <projectName>`
+`sf-web-cli create <projectName>`
 ```
