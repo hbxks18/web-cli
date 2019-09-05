@@ -1,116 +1,29 @@
 {
-  "name": "hbx",
+  "name": "web-cli",
   "version": "1.0.0",
-  "private": true,
+  "description": "sf 项目快速创建",
+  "main": "index.js",
+  "bin": {
+    "web-cli": "./bin/index.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
   "dependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/plugin-proposal-decorators": "^7.4.4",
-    "@babel/polyfill": "^7.4.4",
-    "@svgr/webpack": "2.4.1",
-    "antd": "^3.16.0",
-    "axios": "^0.18.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "9.0.0",
-    "babel-jest": "23.6.0",
-    "babel-loader": "8.0.4",
-    "babel-plugin-import": "^1.11.0",
-    "babel-plugin-named-asset-import": "^0.3.1",
-    "babel-preset-react-app": "^6.1.0",
-    "bfj": "6.1.1",
-    "case-sensitive-paths-webpack-plugin": "2.1.2",
+    "fs-extra": "^8.1.0"
+  },
+  "devDependencies": {
+    "@vue/cli-shared-utils": "^3.11.0",
     "chalk": "^2.4.2",
-    "concurrently": "^4.0.1",
-    "css-loader": "^2.1.0",
-    "dotenv": "6.0.0",
-    "dotenv-expand": "4.2.0",
-    "echarts": "^4.2.0-rc.2",
-    "echarts-for-react": "^2.0.15-beta.0",
-    "eslint": "^5.13.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-react-app": "^3.0.7",
-    "eslint-config-sf-react": "^1.1.9",
-    "eslint-formatter-friendly-cn": "^5.0.2",
-    "eslint-loader": "^2.1.2",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-react": "^7.12.4",
-    "file-loader": "2.0.0",
-    "fork-ts-checker-webpack-plugin-alt": "0.4.14",
-    "fs-extra": "7.0.0",
-    "html-webpack-plugin": "4.0.0-alpha.2",
-    "http-proxy-middleware": "^0.19.0",
-    "husky": "^1.3.1",
-    "identity-obj-proxy": "3.0.0",
-    "less": "^3.9.0",
-    "less-loader": "^5.0.0",
-    "less-vars-to-js": "^1.3.0",
-    "lint-staged": "^8.1.0",
-    "mini-css-extract-plugin": "0.4.3",
-    "mobx": "^5.9.4",
-    "mobx-react": "^5.4.4",
-    "mockjs": "^1.0.1-beta3",
-    "moment": "^2.22.2",
-    "node-sass": "^4.10.0",
-    "nodemon": "^1.18.6",
-    "optimize-css-assets-webpack-plugin": "5.0.1",
-    "pnp-webpack-plugin": "1.1.0",
-    "postcss-flexbugs-fixes": "4.1.0",
-    "postcss-loader": "^3.0.0",
-    "postcss-preset-env": "6.0.6",
-    "postcss-safe-parser": "4.0.1",
-    "prettier": "^1.15.3",
-    "prompt": "^1.0.0",
-    "prop-types": "^15.7.2",
-    "qs": "^6.7.0",
-    "rc-queue-anim": "^1.6.12",
-    "react": "^16.8.6",
-    "react-app-polyfill": "^0.1.3",
-    "react-copy-to-clipboard": "^5.0.1",
-    "react-dev-utils": "^6.1.1",
-    "react-dnd": "^7.6.0",
-    "react-dnd-html5-backend": "^7.6.0",
-    "react-dom": "^16.8.6",
-    "react-loadable": "^5.5.0",
-    "react-router-dom": "^4.3.1",
-    "resolve": "1.8.1",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "terser-webpack-plugin": "1.1.0",
-    "url-loader": "^1.1.2",
-    "webpack": "^4.32.2",
-    "webpack-dev-server": "^3.4.1",
-    "webpack-manifest-plugin": "2.0.4",
-    "workbox-webpack-plugin": "3.6.3"
+    "commander": "^3.0.1",
+    "download-git-repo": "^2.0.0",
+    "handlebars": "^4.2.0",
+    "inquirer": "^7.0.0",
+    "metalsmith": "^2.3.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
-    "package": "node scripts/push/deploy.js",
-    "build:test": "cross-env GENERATE_SOURCEMAP=false NODE_ENV=test BABEL_ENV=production node scripts/build.js",
-    "build:publish": "cross-env GENERATE_SOURCEMAP=false NODE_ENV=production BABEL_ENV=production node scripts/build.js",
-    "mock": "nodemon --watch mock mock/server.js",
-    "start:mock": "concurrently \"nodemon --watch mock mock/server.js\" \"node scripts/start.js\"",
-    "lib:init": "git submodule update --init",
-    "lib:pull": "git submodule foreach git pull origin master"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,scss,less}": [
-      "prettier",
-      "git add"
-    ]
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "cross-env": "^5.2.0"
-  }
+  "author": "",
+  "license": "ISC"
 }
