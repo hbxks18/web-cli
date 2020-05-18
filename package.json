@@ -1,6 +1,6 @@
 {
   "name": "sf-web-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "sf 项目快速创建",
   "main": "index.js",
   "bin": {
